@@ -154,8 +154,8 @@ Multisig Escrow: Add support for multisignature contracts to enhance security.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Project File Structure
-php
-Copy code
+
+```bash
 decentralized_freelance_marketplace/
 │
 ├── src/                              # Backend smart contract code (Rust)
@@ -177,18 +177,22 @@ decentralized_freelance_marketplace/
 ├── Cargo.toml                        # Rust project manifest file (dependencies, metadata)
 │
 └── README.md                         # Project documentation
+```
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Breakdown:
 src/ (Backend):
 lib.rs: The Rust-based smart contract using the Soroban SDK. This file contains all the core logic for managing freelance job contracts, escrowed payments, and dispute resolution.
+
 frontend/ (Frontend):
 src/: The React app's source code. It includes:
 App.js: The main application component that ties everything together.
 index.js: The entry point of the React application.
+
 components/: A folder holding reusable components for specific functionalities:
 ConnectWallet.js: Handles wallet connection through Stellar's Freighter API.
 CreateJob.js: Provides the UI for clients to create a freelance job contract.
 JobDetails.js: Displays the details of the job contract, including actions like releasing payment or resolving disputes.
+
 package.json: Contains metadata about the frontend project and its dependencies (React, Stellar API, etc.), along with scripts to run and build the app.
 index.html: The HTML template used by React to inject components.
 public/: Holds public assets like images, icons, and static files required by the frontend.
@@ -206,11 +210,23 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 This project is licensed under the MIT License.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Acknowledgments
+## Acknowledgments 
+- **Soroswap:** DEX
+    - https://github.com/soroswap
+    - https://soroswap.finance/
+- **Aquarius:** Liquidity Management
+    - https://aqua.network/
+    - https://github.com/AquaToken
+- **Phoenix: DEX**
+    - https://www.phoenix-hub.io/
+    - https://github.com/Phoenix-Protocol-Group
+- **Blend: Lending**
+    - https://docs.blend.capital/
+    - https://github.com/blend-capital
 
-- [Hardhat](https://hardhat.org/)
--
-- 
+**Starlight:  dApp Discovery tool**
 
+- https://stellarlight.xyz/ecosystem
+- Allows you to search and filter dApps by category such as "Lending & Borrowing"
 
 
