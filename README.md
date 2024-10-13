@@ -158,25 +158,19 @@ Project File Structure
 ```bash
 decentralized_freelance_marketplace/
 │
-├── src/                              # Backend smart contract code (Rust)
-│   └── lib.rs                        # Main contract logic written in Rust
+├── src/
+│   ├── lib.rs                 # Main smart contract code
 │
-├── frontend/                         # Frontend code (React)
-│   ├── src/                          # React source code
-│   │   ├── App.js                    # Main React app component
-│   │   ├── index.js                  # React app entry point
-│   │   └── components/               # Reusable React components
-│   │       ├── ConnectWallet.js      # Wallet connection component
-│   │       ├── CreateJob.js          # Component to create a freelance job
-│   │       └── JobDetails.js         # Component to view job details
-│   │
-│   ├── package.json                  # Frontend dependencies and scripts
-│   ├── index.html                    # HTML template for the React app
-│   └── public/                       # Public assets (e.g., images, icons)
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── ConnectWallet.js   # Freighter integration component (React)
+│   │   └── App.js                 # Main React frontend file
+│   ├── package.json           # React frontend dependencies
+│   └── index.html             # Basic HTML to load the React app
 │
-├── Cargo.toml                        # Rust project manifest file (dependencies, metadata)
-│
-└── README.md                         # Project documentation
+├── Cargo.toml                 # Rust project configuration
+└── README.md                  # Documentation for the project
 ```
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Breakdown:
