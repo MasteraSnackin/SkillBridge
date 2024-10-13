@@ -1,160 +1,144 @@
-## Decentralized Freelance Marketplace
-This project is a decentralized platform built on the Stellar blockchain that enables clients and freelancers to engage in trustless freelance contracts. It offers escrowed payments, dispute resolution, and automated smart contract functionality, ensuring secure transactions without intermediaries.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Skillbridge is a decentralized freelance marketplace leveraging the Stellar blockchain and Soroban smart contracts to solve key issues in the part-time labor market, such as trust, delayed payments, and high transaction fees. It enables freelancers and clients to interact in a trustless environment where payments are automated and secured by smart contracts.
 
-## Features
-1. Escrowed Payments
-Secure Payments: Funds from the client are locked into an escrow smart contract until the work is completed.
-Automated Release: Upon completion of milestones or the entire job, the payment is automatically released to the freelancer if conditions are met.
-2. Dispute Resolution
-On-Chain Mediation: If there is a disagreement, a third-party mediator or automated process can resolve disputes through the smart contract.
-Funds Recovery: Depending on the resolution, funds are either released to the freelancer or refunded to the client.
-3. Blockchain-Powered
-Stellar Blockchain: All transactions and escrows are managed on Stellar’s decentralized network.
-Soroban SDK: The contract is implemented using the Soroban SDK, which simplifies building decentralized applications on Stellar.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Problems Solved
+Trust Issues: Freelancers fear not being paid, while clients worry about incomplete work. This platform resolves these concerns by using escrow smart contracts that hold funds until agreed-upon milestones are completed.
+Payment Delays and Fees: Stellar’s fast and low-cost transaction infrastructure ensures that payments are processed instantly and cheaply, even for cross-border payments, avoiding traditional banking fees.
+Dispute Resolution: Disputes are handled via smart contracts or escalated through on-chain mediation using Soroban.
 
-## Technology Stack
-Smart Contract Language: Rust
-Blockchain: Stellar
-Frontend: React
-Wallet Integration: Stellar Freighter API
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Key Features
+Decentralized Job Marketplace: Clients post short-term jobs that freelancers can accept.
+Automated Escrow: Soroban smart contracts handle escrow, ensuring funds are securely locked until work is completed.
+Global Payments: Payments are processed instantly and cheaply using Stellar’s blockchain, supporting cross-border payments via anchors.
+Dispute Resolution: Disputes are resolved via on-chain governance or a mediation layer, making the platform fair and secure.
 
-## Project Structure
-The project is divided into two major components:
-Backend: A Rust-based smart contract that handles the core logic of the freelance marketplace.
-Directory: src/
-Main file: lib.rs
-Contract Features:
-Escrow creation and payment release.
-Job cancellation and refunding.
-Dispute resolution.
-Frontend: A React-based user interface that interacts with the smart contract deployed on Stellar.
-Directory: frontend/
-Main file: index.html and src/index.js
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Smart Contract Features: Soroban will manage:
 
-## Features:
-Connect client and freelancer wallets.
-Submit contract details to the blockchain.
-Display contract status and initiate payments or dispute resolution.
-Smart Contract Functionality (Detailed)
-1. initialize()
-Parameters: client (Address), freelancer (Address), amount (Int64), deadline (u64)
-Description:
-Initializes a new job contract between the client and freelancer.
-Escrows the amount in the contract and sets a deadline for job completion.
-Contract State: Stores the client’s and freelancer’s addresses, the escrowed amount, and the job deadline.
-2. release_payment()
-Parameters: env (Env)
-Description:
-Checks if the current time is within the deadline and releases the payment to the freelancer.
-If the deadline has passed, the contract does not release funds.
-3. resolve_dispute()
-Parameters: decision (bool)
-Description:
-Resolves disputes. If the decision is true, the funds are transferred to the freelancer. If false, the client is refunded.
-Designed to be called by a trusted mediator or smart contract logic based on preset rules.
-Getting Started
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- Escrow: Payments from clients are locked in a Stellar-based escrow and are only released once the task is completed and approved.
+- Milestone-based payments: Partial payments are automatically released upon completion of agreed milestones.
+- Dispute Resolution: Handling via on-chain mediation and governance models.
+- Soroban SDK and CLI: Use the Soroban SDK to write and test smart contracts. We will also need the Soroban CLI for building and deploying the contracts on Stellar’s test network.
 
-## Prerequisites
-- Node.js & npm: Ensure that Node.js and npm are installed for managing frontend dependencies. You can install them here.
-- Rust: The backend is written in Rust. Install Rust from here.
-- Stellar Account: You need a Stellar account for deploying the contract and making transactions. You can create one using the Stellar Account Viewer.
-- Freighter Wallet: The frontend requires Stellar’s Freighter Wallet for blockchain transactions. Install the browser extension from here.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  
-## Installation
-Backend (Rust)
-Navigate to the src directory:
-bash
-Copy code
-```bash
-cd src/
-```
+## Freelancer Marketplace Workflow:
 
-Build the contract:
+- Job Posting: Clients post jobs with defined milestones.
+- Bidding: Freelancers submit bids, and the client selects the winning bid.
+- Escrow Payment: Payment is locked into the smart contract at the beginning.
+- Payment Release: When milestones are approved, payments are released automatically.
+- Freighter Wallet Integration: Freighter wallet integration is necessary to allow users to sign transactions. It will enable users to interact with the platform via their wallet for tasks like deposits and withdrawals.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Instructions for Running the Project Locally
+Prerequisites:
+Rust: Make sure you have Rust installed on your machine. You can install it using:
 
 bash
 Copy code
 ```bash
-cargo build --release
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+Soroban CLI: Install the Soroban CLI to build and deploy smart contracts.
 ```
-
-Run Tests (optional):
 bash
 Copy code
 ```bash
-cargo test
+cargo install --locked --version 0.9.4 soroban-cli
+Node.js and npm: Ensure that you have Node.js and npm installed. You can check this by running:
 ```
+bash
+Copy code
+```bash
+node -v
+npm -v
+```
+If Node.js is not installed, you can install it from here.
 
-Frontend (React)
+Freighter Wallet: Install the Freighter Wallet extension in your browser from here.
+
+Steps for Running the Backend (Rust Smart Contract)
+Navigate to the project directory where the Rust backend resides:
+
+bash
+Copy code
+```bash
+cd decentralized_freelance_marketplace
+Build the smart contract using the Soroban CLI:
+```
+bash
+Copy code
+soroban contract build
+Deploy the smart contract on Stellar's Futurenet (test network). This will require a funded account for the source address.
+
+bash
+Copy code
+```bash
+soroban contract deploy \
+  --wasm target/wasm32-unknown-unknown/release/decentralized_freelance_marketplace.wasm \
+  --source token-admin \
+  --network FUTURENET
+```
+Steps for Running the Frontend (React Application)
 Navigate to the frontend directory:
+
 bash
 Copy code
 ```bash
-cd frontend/
+cd frontend
+Install dependencies for the React application:
 ```
-
-Install frontend dependencies:
 bash
 Copy code
 ```bash
 npm install
+Start the React frontend:
 ```
-
-Start the development server:
 bash
 Copy code
 ```bash
 npm start
 ```
+Open your browser and navigate to:
+
+arduino
+Copy code
+```bash
+http://localhost:3000
+```
+You should be able to connect your Freighter wallet and interact with the smart contract from the frontend.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Contract Deployment
-Compile the Contract: Ensure the Rust contract is compiled using cargo build.
-Deploy to Stellar:
-Use the Stellar Soroban CLI to deploy the contract to a Stellar node.
-Example command:
+##Steps for Deployment and Running:
+Backend Setup (Rust & Soroban)
+
+Build the smart contract:
 bash
 Copy code
 ```bash
-soroban contract deploy --wasm-path path_to_your_wasm_file --network your_stellar_network
+soroban contract build
 ```
-
-Set Up the Contract: After deploying, invoke the initialize() function to set up a job contract between the client and freelancer:
+Deploy the smart contract to the testnet:
 bash
 Copy code
 ```bash
-soroban contract invoke --id contract_id --fn initialize --client client_address --freelancer freelancer_address --amount 100 --deadline timestamp
+soroban contract deploy --wasm target/wasm32-unknown-unknown/release/your_contract.wasm --network FUTURENET
 ```
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Frontend Interaction
-Once the backend contract is deployed, the frontend allows users to interact with the marketplace:
-Connect Wallet: Use Stellar’s Freighter wallet to sign in as a client or freelancer.
-Create a Job Contract: Clients can create job contracts by submitting details like freelancer address, amount, and deadline through the frontend UI.
-Release Payment: Once the work is completed, the client can release the payment to the freelancer using the Release Payment button.
-Resolve Dispute: If a dispute occurs, either party can initiate the dispute resolution process.
+Frontend Setup (React)
+
+Install dependencies and run the React frontend:
+bash
+Copy code
+```bash
+cd frontend
+npm install
+npm start
+```
+Connect Freighter Wallet
+
+Users can connect their Freighter wallet through the React frontend to sign transactions and interact with the Soroban smart contract.
+Final Notes
+Ensure you have Freighter Wallet installed to test the transaction flow.
+The smart contract handles basic escrow, milestone payments, and dispute resolution.
+You can extend the project by adding more robust payment handling, milestone tracking, and governance models for dispute resolution.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Example Workflow
-Client and freelancer agree on terms: The client creates a job, locking funds in the smart contract.
-Freelancer completes the job: The freelancer submits the completed work.
-Client releases payment: If satisfied, the client releases the payment from the escrow.
-Dispute resolution (if necessary): If there’s a dispute, it is resolved via the smart contract’s resolve_dispute function.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Known Limitations
-Token Transfers: The current implementation assumes a token transfer mechanism is in place (e.g., Stellar's native token or another asset). Ensure your Stellar network is set up to handle the relevant tokens.
-Mediation Logic: Dispute mediation can be automated or manual. This implementation assumes manual mediation via a resolve_dispute() function call.
-## Roadmap
-Token Integration: Add functionality for token transfers between users.
-Automated Dispute Mediation: Implement smart contract-based rules for automated mediation.
-Multisig Escrow: Add support for multisignature contracts to enhance security.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Project File Structure
-
+Project Structure
+bash
 ```bash
 decentralized_freelance_marketplace/
 │
@@ -172,27 +156,6 @@ decentralized_freelance_marketplace/
 ├── Cargo.toml                 # Rust project configuration
 └── README.md                  # Documentation for the project
 ```
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Breakdown:
-src/ (Backend):
-lib.rs: The Rust-based smart contract using the Soroban SDK. This file contains all the core logic for managing freelance job contracts, escrowed payments, and dispute resolution.
-
-frontend/ (Frontend):
-src/: The React app's source code. It includes:
-App.js: The main application component that ties everything together.
-index.js: The entry point of the React application.
-
-components/: A folder holding reusable components for specific functionalities:
-ConnectWallet.js: Handles wallet connection through Stellar's Freighter API.
-CreateJob.js: Provides the UI for clients to create a freelance job contract.
-JobDetails.js: Displays the details of the job contract, including actions like releasing payment or resolving disputes.
-
-package.json: Contains metadata about the frontend project and its dependencies (React, Stellar API, etc.), along with scripts to run and build the app.
-index.html: The HTML template used by React to inject components.
-public/: Holds public assets like images, icons, and static files required by the frontend.
-Cargo.toml: This is the Rust project’s manifest file, specifying the project dependencies, build scripts, and metadata required to build the smart contract.
-README.md: The documentation file that describes the project, installation steps, usage, and other details.
-
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Contributing
