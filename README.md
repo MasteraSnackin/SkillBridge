@@ -2,17 +2,24 @@
 
 
 Skillbridge is a decentralized freelance marketplace leveraging the Stellar blockchain and Soroban smart contracts to solve key issues in the part-time labor market, such as trust, delayed payments, and high transaction fees. It enables freelancers and clients to interact in a trustless environment where payments are automated and secured by smart contracts.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Problems Solved
-Trust Issues: Freelancers fear not being paid, while clients worry about incomplete work. This platform resolves these concerns by using escrow smart contracts that hold funds until agreed-upon milestones are completed.
-Payment Delays and Fees: Stellar’s fast and low-cost transaction infrastructure ensures that payments are processed instantly and cheaply, even for cross-border payments, avoiding traditional banking fees.
-Dispute Resolution: Disputes are handled via smart contracts or escalated through on-chain mediation using Soroban.
+## Decentralized Freelance Marketplace
+This project is a decentralized platform built on the Stellar blockchain that enables clients and freelancers to engage in trustless freelance contracts. It offers escrowed payments, dispute resolution, and automated smart contract functionality, ensuring secure transactions without intermediaries.
+Features
 
-## Key Features
-Decentralized Job Marketplace: Clients post short-term jobs that freelancers can accept.
-Automated Escrow: Soroban smart contracts handle escrow, ensuring funds are securely locked until work is completed.
-Global Payments: Payments are processed instantly and cheaply using Stellar’s blockchain, supporting cross-border payments via anchors.
-Dispute Resolution: Disputes are resolved via on-chain governance or a mediation layer, making the platform fair and secure.
+1. Escrowed Payments
+Secure Payments: Funds from the client are locked into an escrow smart contract until the work is completed.
+Automated Release: Upon completion of milestones or the entire job, the payment is automatically released to the freelancer if conditions are met.
+
+3. Dispute Resolution
+On-Chain Mediation: If there is a disagreement, a third-party mediator or automated process can resolve disputes through the smart contract.
+Funds Recovery: Depending on the resolution, funds are either released to the freelancer or refunded to the client.
+
+5. Blockchain-Powered
+Stellar Blockchain: All transactions and escrows are managed on Stellar’s decentralized network.
+Soroban SDK: The contract is implemented using the Soroban SDK, which simplifies building decentralized applications on Stellar.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Smart Contract Features: Soroban will manage:
 
@@ -20,6 +27,7 @@ Dispute Resolution: Disputes are resolved via on-chain governance or a mediation
 - Milestone-based payments: Partial payments are automatically released upon completion of agreed milestones.
 - Dispute Resolution: Handling via on-chain mediation and governance models.
 - Soroban SDK and CLI: Use the Soroban SDK to write and test smart contracts. We will also need the Soroban CLI for building and deploying the contracts on Stellar’s test network.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Freelancer Marketplace Workflow:
 
