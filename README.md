@@ -173,7 +173,7 @@ decentralized_freelance_marketplace/
 - [Umair Ismati](https://github.com/Rappid-exe)
 - [Alex-Constantin Jumatii](https://github.com/Alex-CJ)
 - [Anis Bentahar](https://github.com/anistayebM)
-- [Freya Wu](https://github.com/YanniWu88/EchoPay-2)
+- [Freya Wu](https://github.com/YanniWu88)
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
