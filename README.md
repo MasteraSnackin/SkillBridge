@@ -177,7 +177,13 @@ decentralized_freelance_marketplace/
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+IMAGE
+![Project Screenshot 1](https://1drv.ms/i/s!At64SwKetw4ik8hUMRr0n8b1ApJEFw?e=Oy2DPm)
 
+![Project Screenshot 2](https://1drv.ms/i/s!At64SwKetw4ik8hT2-Pf1-t4gfC-NA?e=R9hwGv)
+
+Video https://youtu.be/c2s0h9VR4OQ
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## License
 
 This project is licensed under the MIT License.
