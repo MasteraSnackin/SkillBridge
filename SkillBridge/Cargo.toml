@@ -1,0 +1,8 @@
+
+[package]
+name = "decentralized_freelance_marketplace"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+soroban-sdk = "0.8"  # Add the latest Soroban SDK version here
