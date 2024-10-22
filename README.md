@@ -171,7 +171,6 @@ decentralized_freelance_marketplace/
 
 ## Contributors
 - [Umair Ismati](https://github.com/Rappid-exe)
-- [Alex-Constantin Jumatii](https://github.com/Alex-CJ)
 - [Anis Bentahar](https://github.com/anistayebM)
 - [Freya Wu](https://github.com/YanniWu88)
 
@@ -182,11 +181,14 @@ IMAGE
 
 ![Project Screenshot 2](https://1drv.ms/i/s!At64SwKetw4ik8hT2-Pf1-t4gfC-NA?e=R9hwGv)
 
-Video https://youtu.be/c2s0h9VR4OQ
+Video https://youtu.be/c2s0h9VR4OQ this will be updated soon 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## License
 
 This project is licensed under the MIT License.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+UPDATE Need to rebuild the frontend and change storage type to Persistent data storage
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Acknowledgments 
 - **Soroswap:** DEX
