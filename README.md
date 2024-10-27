@@ -4,6 +4,12 @@
 Skillbridge is a decentralized freelance marketplace leveraging the Stellar blockchain and Soroban smart contracts to solve key issues in the part-time labor market, such as trust, delayed payments, and high transaction fees. It enables freelancers and clients to interact in a trustless environment where payments are automated and secured by smart contracts.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Image A[Overview](https://1drv.ms/i/s!At64SwKetw4ik8hYvVKHXdYtcSOhxA?e=JHeuLE)
+Image B[Condition](https://1drv.ms/i/s!At64SwKetw4ik8hW39siTSy-rE6VQg?e=7R1Iye)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 ## Decentralized Freelance Marketplace
 This project is a decentralized platform built on the Stellar blockchain that enables clients and freelancers to engage in trustless freelance contracts. It offers escrowed payments, dispute resolution, and automated smart contract functionality, ensuring secure transactions without intermediaries.
 Features
@@ -167,6 +173,9 @@ decentralized_freelance_marketplace/
 ├── Cargo.toml                 # Rust project configuration
 └── README.md                  # Documentation for the project
 ```
+
+Image 1[File Structure](https://1drv.ms/i/s!At64SwKetw4ik8hZtWqQEODpYx6k7Q?e=aBxgZx)
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Contributors
@@ -176,12 +185,8 @@ decentralized_freelance_marketplace/
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-IMAGE
-![Project Screenshot 1](https://1drv.ms/i/s!At64SwKetw4ik8hUMRr0n8b1ApJEFw?e=Oy2DPm)
 
-![Project Screenshot 2](https://1drv.ms/i/s!At64SwKetw4ik8hT2-Pf1-t4gfC-NA?e=R9hwGv)
-
-Video https://youtu.be/c2s0h9VR4OQ this will be updated soon 
+Video https://youtu.be/c2s0h9VR4OQ 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## License
 
