@@ -1,4 +1,4 @@
-## Offers a decentralised marketplace to help freelancers and clients solve trust, payment delays, and fees with Stellar blockchain and smart contract automation..
+## Offers a decentralised marketplace to help freelancers and clients solve trust, payment delays, and fees with Stellar blockchain and smart contract automation.
 
 
 Skillbridge is a decentralized freelance marketplace leveraging the Stellar blockchain and Soroban smart contracts to solve key issues in the part-time labor market, such as trust, delayed payments, and high transaction fees. It enables freelancers and clients to interact in a trustless environment where payments are automated and secured by smart contracts.
